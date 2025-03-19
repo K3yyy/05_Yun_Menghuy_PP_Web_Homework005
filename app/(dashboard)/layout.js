@@ -1,4 +1,5 @@
 import DashboardSidebar from "@/components/dashboard-sidebar/dashboard-sidebar";
+import SearchBar from "@/components/SearchBar";
 import React from "react";
 
 export default function DashboardLayout({ children }) {
@@ -10,8 +11,9 @@ export default function DashboardLayout({ children }) {
       </aside>
 
       {/* Main content */}
-      <section className="col-span-9 ml-[500px] overflow-auto">
-        {children}
+      <section className="col-span-9  ml-[500px] overflow-auto items-center flex flex-col">
+        <SearchBar />
+        <div>{children}</div>
       </section>
     </div>
   );

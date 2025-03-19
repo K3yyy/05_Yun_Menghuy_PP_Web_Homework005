@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-Link;
 export default function NavbarLink(item) {
   const pathname = usePathname();
   console.log("pathname:", pathname);

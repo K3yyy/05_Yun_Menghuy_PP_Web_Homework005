@@ -220,8 +220,8 @@ export default function DashboardSidebar() {
             />
           </div>
           <div className="text-center mb-4">
-            <p className="text-lg font-semibold text-gray-700">YourKeyy</p>
-            <p className="text-sm text-gray-500">K3yy@gmail.com</p>
+            <p className="text-lg font-semibold text-gray-300">YourKeyy</p>
+            <p className="text-sm text-gray-400">K3yy@gmail.com</p>
           </div>
           <div className="flex flex-col flex-1 overflow-y-auto">
             <nav className="flex-1 px-2 py-4 bg-gray-800">
