@@ -11,9 +11,11 @@ export default function DashboardLayout({ children }) {
       </aside>
 
       {/* Main content */}
-      <section className="col-span-9  ml-[500px] overflow-auto items-center flex flex-col">
-        <SearchBar />
-        <div>{children}</div>
+      <section className="col-span-12  ml-[250px] overflow-auto items-center flex flex-col">
+        <div className="fixed top-0 z-10">
+          <SearchBar />
+        </div>
+        <div className="mt-24">{children}</div>
       </section>
     </div>
   );

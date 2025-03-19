@@ -1,6 +1,6 @@
 import { Search } from "lucide-react"; // Import search icon from Lucide
 
-function SearchBar({ query, handleSearchChange }) {
+function SearchBar() {
   return (
     <div className="my-4 mx-2  dark:bg-gray-800 flex items-center  rounded-lg shadow-sm">
       <div className="p-4 text-gray-600 dark:text-gray-300 outline-none focus:outline-none">
@@ -20,7 +20,6 @@ function SearchBar({ query, handleSearchChange }) {
             required
             step="any"
             autoCapitalize="none"
-            // autofocus
           />
           <button
             type="submit"

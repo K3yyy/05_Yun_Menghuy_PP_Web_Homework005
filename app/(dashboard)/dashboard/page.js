@@ -1,8 +1,9 @@
 import React from "react";
 import CardComponent from "@/components/CardComponent";
 import Link from "next/link";
+import { getAllBooks } from "@/service/bookService";
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
   const books = [
     {
       id: 1,
@@ -18,17 +19,22 @@ export default function DashboardPage() {
         "https://i.pinimg.com/736x/a5/a8/38/a5a838fa9aabdd10683a63b88f9489c9.jpg",
       title: "Book Two",
       type: "Cartoon",
-      href: "/cartoon", // Added href for consistency
+      href: "/cartoon",
     },
   ];
 
   return (
-    <div className="flex flex-wrap justify-center gap-10 mt-[250px]">
-      {books.map((book) => (
-        <Link key={book.id} href={book.href || "#"}>
-          <CardComponent book={book} />
-        </Link>
-      ))}
+    <div>
+      <h1 className="translate-x-[-250px] flex justify-center items-center font-bold w-[100px] text-center h-[30px]   rounded-lg ">
+        Home
+      </h1>
+      <div className="flex flex-wrap justify-center gap-10 mt-[150px]">
+        {books.map((book) => (
+          <Link key={book.id} href={book.href}>
+            <CardComponent book={book} />
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

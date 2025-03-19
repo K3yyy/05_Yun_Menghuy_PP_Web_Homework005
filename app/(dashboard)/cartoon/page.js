@@ -12,10 +12,9 @@ export default async function CartoonCard() {
           key={cartoon.id}
           className="w-[300px] h-[400px] bg-white border border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow"
         >
-          {/* Cartoon Cover Image */}
           <div className="w-full h-56 relative rounded-t-lg overflow-hidden bg-gray-200">
             <Image
-              src={cartoon.image || "/default-cartoon.jpg"} // Fallback image if no cartoon image is provided
+              src={cartoon.image || "/default-cartoon.jpg"}
               alt={cartoon.ct_title || "Cartoon Cover"}
               layout="fill"
               objectFit="cover"
@@ -32,7 +31,6 @@ export default async function CartoonCard() {
               {cartoon.ct_description || "No description available."}
             </p>
 
-            {/* Release Year and Button */}
             <div className="flex justify-between items-center">
               <span className="text-xs text-gray-500">
                 {cartoon.created_at
